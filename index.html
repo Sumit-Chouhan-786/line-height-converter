@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel To Percentage Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Add custom animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900 px-4 pt-4 md:pt-0 md:px-0">
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold text-gray-900 fade-in">Pixel To Percentage Converter</h1>
+        </div>
+    </header>
+
+    <main class="flex flex-col items-center justify-center min-h-screen py-12">
+        <div class="w-full max-w-md bg-white p-8 shadow rounded-lg">
+            <form id="converter-form" class="space-y-6">
+                <div>
+                    <label for="base" class="block text-sm font-medium text-gray-700">Base (Font Size in px)</label>
+                    <input id="base" placeholder="16" name="base" type="number" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <label for="pixels" class="block text-sm font-medium text-gray-700">Pixels (px)</label>
+                    <input id="pixels" name="pixels" type="number" required
+                        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                </div>
+                <div>
+                    <button type="submit"
+                        class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        Convert
+                    </button>
+                </div>
+            </form>
+            <div id="result" class="mt-6 text-center text-lg font-semibold text-gray-700 fade-in"></div>
+        </div>
+
+        <section class="w-full max-w-2xl mt-12 fade-in">
+            <h2 class="text-2xl font-bold mb-4">Pixels to Percentage Conversion Chart if Font Size (Base) is 16</h2>
+            <table class="min-w-full bg-white shadow rounded-lg overflow-hidden">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-gray-600 uppercase tracking-wider">
+                            Pixel</th>
+                        <th
+                            class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-gray-600 uppercase tracking-wider">
+                            Percentage</th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white">
+                    <!-- Complete rows for the chart -->
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">1 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">6.25%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">2 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">12.5%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">3 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">18.75%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">4 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">25%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">5 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">31.25%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">6 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">37.5%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">7 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">43.75%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">8 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">50%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">9 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">56.25%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">10 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">62.5%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">11 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">68.75%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">12 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">75%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">13 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">81.25%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">14 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">87.5%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">15 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">93.75%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">16 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">100%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">17 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">106.25%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">18 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">112.5%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">19 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">118.75%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">20 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">125%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">21 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">131.25%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">22 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">137.5%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">23 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">143.75%</td>
+                    </tr>
+                    <tr class="bg-gray-50 hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">24 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">150%</td>
+                    </tr>
+                    <tr class="hover:bg-gray-100">
+                        <td class="px-6 py-4 border-b border-gray-200">25 px</td>
+                        <td class="px-6 py-4 border-b border-gray-200">156.25%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer class="bg-white shadow mt-12">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-gray-600">© 2024 PixelConverter</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('converter-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const base = parseFloat(document.getElementById('base').value);
+            const pixels = parseFloat(document.getElementById('pixels').value);
+            if (isNaN(base) || isNaN(pixels)) {
+                document.getElementById('result').textContent = 'Please enter valid numbers';
+                return;
+            }
+            const percentage = (pixels / base) * 100;
+            document.getElementById('result').textContent = `Percentage: ${percentage.toFixed(2)}%`;
+        });
+    </script>
+</body>
+
+</html>
